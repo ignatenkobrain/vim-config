@@ -1,8 +1,8 @@
 all:
 	@git submodule init
-	@git submodule update
+	@git submodule update -f
 	@git submodule foreach git submodule init
-	@git submodule foreach git submodule update
+	@git submodule foreach git submodule update -f
 
 install: all
 	@ln -sf $(shell pwd)/.vimrc ~/.vimrc
