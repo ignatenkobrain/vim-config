@@ -6,7 +6,7 @@ let spec_chglog_prepend = 1
 let spec_chglog_format = "%a %b %d %Y Igor Gnatenko <i.gnatenko.brain@gmail.com> -"
 
 " Tabs
-set et ts=2 shiftwidth=2 sts=2
+set et ts=2 sw=2 sts=2
 filetype indent plugin on
 
 " Translating
