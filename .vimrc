@@ -20,6 +20,11 @@ set secure
 " Python
 au FileType python set et ts=4 sw=4 sts=4
 let g:flake8_ignore="E501"
+au FileType python map <Leader>p :call InsertPdb()<CR>
+function! InsertPdb()
+  let trace = expand("import pdb; pdb.set_trace()")
+  execute "normal o".trace
+endfunction
 
 " Color
 colo desert
