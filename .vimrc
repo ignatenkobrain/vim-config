@@ -19,6 +19,7 @@ set secure
 
 " Python
 au FileType python set et ts=4 sw=4 sts=4
+let g:flake8_ignore="E501"
 
 " Color
 colo desert
