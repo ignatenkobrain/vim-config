@@ -35,3 +35,6 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Git status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+" Github issues
+map <c-g> :Gissues<CR>
