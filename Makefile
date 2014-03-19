@@ -1,8 +1,6 @@
 all:
 	@git submodule init
 	@git submodule update -f
-	@git submodule foreach git submodule init
-	@git submodule foreach git submodule update -f
 
 check:
 	@rpm -q python-jedi &>/dev/null || ( echo "python-jedi is not installed"; exit 1 )
