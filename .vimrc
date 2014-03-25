@@ -1,5 +1,5 @@
 " Load bundle/*
-call pathogen#incubate()
+call pathogen#infect('bundle/{}')
 
 " SPEC
 let spec_chglog_prepend = 1
