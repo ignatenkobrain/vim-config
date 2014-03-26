@@ -17,5 +17,5 @@ uninstall:
 	@rm -f ~/.gvimrc
 	@rm -f ~/.vim
 
-update:
+update: all
 	@git submodule foreach git pull origin master
