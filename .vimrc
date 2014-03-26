@@ -44,3 +44,4 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Github issues
 map <c-g> :Gissues<CR>
+let g:github_upstream_issues = 1
