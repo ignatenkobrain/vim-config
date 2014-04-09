@@ -22,3 +22,6 @@
 [submodule ".vim/bundle/flake8"]
 	path = .vim/bundle/flake8
 	url = https://github.com/nvie/vim-flake8.git
+[submodule ".vim/bundle/latex-live-preview"]
+	path = .vim/bundle/latex-live-preview
+	url = https://github.com/xuhdev/vim-latex-live-preview.git
