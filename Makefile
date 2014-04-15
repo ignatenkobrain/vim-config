@@ -21,4 +21,10 @@ uninstall:
 	@rm -f ~/.vim
 
 update: all
+	@git fetch origin
+	@git reset --hard origin/master
+	@git submodule init
+	@git submodule update -f
+
+update-modules: all
 	@git submodule foreach git pull origin master
