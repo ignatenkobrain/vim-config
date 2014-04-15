@@ -11,20 +11,15 @@ check:
 	@rpm -q vim-latex &>/dev/null || ( echo "vim-latex is not installed"; exit 1 )
 
 install: all check
-	@ln -sf $(shell pwd)/.vimrc ~/.vimrc
-	@ln -sf $(shell pwd)/.gvimrc ~/.gvimrc
-	@ln -sf $(shell pwd)/.vim ~/.vim
+	@cp -pr $(shell pwd)/.vimrc ~/.vimrc
+	@cp -pr $(shell pwd)/.gvimrc ~/.gvimrc
+	@cp -pr $(shell pwd)/.vim ~/.vim
+	@vim +PluginInstall +qall
 
 uninstall:
 	@rm -f ~/.vimrc
 	@rm -f ~/.gvimrc
-	@rm -f ~/.vim
-
-update: all
-	@git fetch origin
-	@git reset --hard origin/master
-	@git submodule init
-	@git submodule update -f
+	@rm -rf ~/.vim
 
 update-modules: all
 	@git submodule foreach git pull origin master

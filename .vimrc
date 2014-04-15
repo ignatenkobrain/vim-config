@@ -1,5 +1,21 @@
-" Load bundle/*
-call pathogen#infect('bundle/{}')
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'nvie/vim-flake8'
+Bundle 'tpope/vim-fugitive'
+Bundle 'jaxbot/github-issues.vim'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'xuhdev/vim-latex-live-preview'
+Bundle 'vim-scripts/The-NERD-tree'
+Bundle 'vim-scripts/po.vim--gray'
+Bundle 'vim-scripts/TaskList.vim'
+
+filetype plugin indent on
+" Vundle END
 
 " SPEC
 let spec_chglog_prepend = 1
