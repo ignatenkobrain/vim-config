@@ -1,0 +1,13 @@
+1.0
+===
+First release.
+Plugins:
+* gmarik/vundle
+* nvie/vim-flake8
+* tpope/vim-fugitive
+* jaxbot/github-issues.vim
+* davidhalter/jedi-vim
+* xuhdev/vim-latex-live-preview
+* vim-scripts/The-NERD-tree
+* vim-scripts/po.vim--gray
+* vim-scripts/TaskList.vim
