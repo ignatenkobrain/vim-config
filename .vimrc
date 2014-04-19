@@ -9,7 +9,6 @@ Bundle 'nvie/vim-flake8'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jaxbot/github-issues.vim'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'xuhdev/vim-latex-live-preview'
 Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/po.vim--gray'
 Bundle 'vim-scripts/TaskList.vim'
@@ -61,9 +60,3 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " Github issues
 map <c-g> :Gissues<CR>
 let g:github_upstream_issues = 1
-
-" LaTeX preview
-let g:livepreview_previewer = "evince"
-let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_MultipleCompleFormat = "pdf"
-au FileType tex map <F9> :LLPStartPreview<CR>

@@ -4,7 +4,6 @@ check:
 	@rpm -q python-flake8 &>/dev/null || ( echo "python-flake8 is not installed"; exit 1 )
 	@rpm -q python3-flake8 &>/dev/null || ( echo "python3-flake8 is not installed"; exit 1 )
 	@rpm -q git &>/dev/null || ( echo "git is not isntalled"; exit 1 )
-	@rpm -q vim-latex &>/dev/null || ( echo "vim-latex is not installed"; exit 1 )
 
 install: check
 	@cp -pr $(shell pwd)/.vimrc ~/.vimrc
