@@ -9,11 +9,14 @@ install: check
 	@cp -pr $(shell pwd)/.vimrc ~/.vimrc
 	@git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 	@vim +PluginInstall +qall
-	@gvim -geometry 9999x9999 +"redir >/tmp/vim-config" +"set lines? columns?" +"redir END" +"quit"
-	@cat /tmp/vim-config | tr -d "\n" | sed -e "s/^ /set/" -e "s/  / /g" > ~/.gvimrc
-	@rm -rf /tmp/vim-config
 
 uninstall:
 	@rm -f ~/.vimrc
 	@rm -f ~/.gvimrc
 	@rm -rf ~/.vim
+
+gui-resolution:
+	@gvim -geometry 9999x9999 +"redir >/tmp/vim-config" +"set lines? columns?" +"redir END" +"quit"
+	@sleep 1
+	@cat /tmp/vim-config | tr -d "\n" | sed -e "s/^ /set/" -e "s/  / /g" > ~/.gvimrc
+	@rm -rf /tmp/vim-config
