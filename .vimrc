@@ -9,9 +9,9 @@ Bundle 'nvie/vim-flake8'
 Bundle 'tpope/vim-fugitive'
 Bundle 'jaxbot/github-issues.vim'
 Bundle 'davidhalter/jedi-vim'
-Bundle 'vim-scripts/The-NERD-tree'
 Bundle 'vim-scripts/po.vim--gray'
 Bundle 'vim-scripts/TaskList.vim'
+Bundle 'Shougo/neocomplete.vim'
 
 filetype plugin indent on
 " Vundle END
@@ -51,12 +51,17 @@ set nu
 " TaskList
 map <leader>td <Plug>TaskList
 
-" File Browser
-map <leader>n :NERDTreeToggle<CR>
-
 " Git status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " Github issues
 map <c-g> :Gissues<CR>
 let g:github_upstream_issues = 1
+
+" NeoComplete
+let g:neocomplete#enable_at_startup = 1
+if !exists('g:neocomplete#keyword_patterns')
+  let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+inoremap <expr><C-Space> pumvisible() ? "\<C-n>" : "\<C-Space>"
